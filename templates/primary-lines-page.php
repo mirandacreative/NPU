@@ -91,4 +91,4 @@ $img = implode(", ", $cat); ?>
         </div>
     </div>
 
-<?php get_footer(); ?>
+<?php get_footer(); // test ?>
