@@ -37,7 +37,7 @@ if($thumb_id){$thumb_url = $thumb_url_array[0]; } else { $thumb_url = get_field(
 <script type="text/javascript">
 var _userway_config = {
 // uncomment the following line to override default position
-// position: 1,
+position: 2,
 // uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)
 // language: null,
 // uncomment the following line to override color set via widget
@@ -142,7 +142,7 @@ account: 'IZe64anxfs'
                     <script type="text/javascript">
                         var google_translate_elem = ((window.innerWidth >= 630)) ? 'google_translate_element' : 'mobile_google_translate_element';
                         function googleTranslateElementInit() {
-                            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'es,fr,pt,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, google_translate_elem);
+                            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,fr,pt,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, google_translate_elem);
                         }
                     </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
