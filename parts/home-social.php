@@ -44,7 +44,7 @@
 
             </div>
             <div class="col-md-4 social__single  mobile_hide">
-                <?php echo do_shortcode('[custom-twitter-feeds]') ?>
+              <a class="twitter-timeline" data-height="500" href="https://twitter.com/NPUtilities?ref_src=twsrc%5Etfw">Tweets by NPUtilities</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div class="col-md-4 social__single ">
                 <?php if ($title = get_field('safety_training')): ?>
