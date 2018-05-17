@@ -8,8 +8,8 @@
                 <?php endif ?>
                 <?php $arg = array(
                     'post_type' => 'post', /*<-- Enter name of Custom Post Type here*/
-                    'order' => 'ASC',
-                    'orderby' => 'menu_order',
+                    'order' => 'DESC',
+                    // 'orderby' => 'menu_order',
                     'posts_per_page' => 5,
                     'category_name' => 'featured'
                 );
@@ -53,9 +53,9 @@
                     <div class="featured-story">
                         <h3 class="post__title">Alert</h3>
                         <?php the_field('banner_alert_link_text', 'options') ?>
-                        <?php if ($alert = get_field('banner_alert_link', 'options')): ?> 
+                        <?php if ($alert = get_field('banner_alert_link', 'options')): ?>
                         <a href="<?= $alert ?>" class="button">Learn More</a>
-                        <?php endif; ?>                      
+                        <?php endif; ?>
 
                     </div>
                 <?php endif; ?>
