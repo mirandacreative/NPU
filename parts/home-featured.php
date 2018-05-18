@@ -9,7 +9,7 @@
                 <?php $arg = array(
                     'post_type' => 'post', /*<-- Enter name of Custom Post Type here*/
                     'order' => 'DESC',
-                    // 'orderby' => 'menu_order',
+                    'orderby' => 'menu_order',
                     'posts_per_page' => 5,
                     'category_name' => 'featured'
                 );
@@ -49,16 +49,17 @@
                     <h2><?php echo $update_title ?></h2>
                 <?php endif; ?>
 
-                    <?php if ($alert_on = get_field('banner_alert', 'options')): ?>
-                    <div class="featured-story">
-                        <h3 class="post__title">Alert</h3>
-                        <?php the_field('banner_alert_link_text', 'options') ?>
-                        <?php if ($alert = get_field('banner_alert_link', 'options')): ?>
-                        <a href="<?= $alert ?>" class="button">Learn More</a>
-                        <?php endif; ?>
+                <?php if ($alert_on = get_field('alerts_title')): ?>
+                  <div class="featured-story">
+                      <h3 class="post__title"><?= $alert_on; ?></h3>
+                      <?php $alert_object = get_field('alerts');?>
+                      <?php $alert_excerpt = $alert_object->post_content; ?>
+                      <p><?php echo wp_trim_words($alert_excerpt, 31) ?></p>
+                      <a href="<?php echo get_the_permalink($alert_object->ID); ?>"
+                         class="button"><?php _e('Learn more'); ?></a>
+                  </div>
+               <?php endif; ?>
 
-                    </div>
-                <?php endif; ?>
                 <?php if ($featured_story = get_field('recent_news')):
                     /** @var WP_Post $featured_story */
                     ?>
